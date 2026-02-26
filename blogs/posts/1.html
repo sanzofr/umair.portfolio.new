@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            overflow-x: hidden;
+        }
+
+        @font-face {
+            font-family: jetBrains;
+            src: url(/fonts/JETBRAINSMONONL-LIGHT.TTF);
+        }
+
+        @font-face {
+            font-family: sf;
+            src: url(/fonts/SFUIDISPLAY-LIGHT.TTF);
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #EFEAF5;
+            color: #121212;
+            font-family: sf;
+        }
+
+        /* header */
+        .header {
+            font-family: jetBrains;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #777981;
+            border-radius: 5px;
+            width: 250px;
+            margin: 20px auto;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .header .overlay {
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            visibility: hidden;
+            opacity: 0;
+            transform: translate(-50%, -8px);
+            width: 250px;
+            top: 70px;
+            position: absolute;
+            border-radius: 5px;
+            left: 50%;
+            padding: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background-color: #777981
+        }
+
+        .header .overlay a {
+            color: #fff;
+        }
+
+        .header.active .overlay {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+
+        /* posts */
+        .post {
+            padding: 50px 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .post p {
+            font-family: jetBrains;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /* footer */
+        .footer {
+            padding: 60px 200px;
+            text-align: center;
+            background-color: #0a0a0a;
+        }
+
+        .footer h2 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .footer p {
+            opacity: 0.8;
+        }
+
+        .socials {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .socials i {
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+
+        /* -------- TABLET (≤ 1024px) -------- */
+        @media (max-width: 1024px) {
+            .footer {
+                padding: 80px 80px;
+            }
+
+            .post {
+                padding: 50px 100px;
+            }
+
+        }
+
+        /* -------- MOBILE (≤ 768px) -------- */
+        @media (max-width: 768px) {
+
+            /* GLOBAL PADDING */
+            .footer {
+                padding: 60px 24px;
+            }
+
+            /* HEADER */
+            .header {
+                padding: 10px 80px;
+            }
+
+            .post {
+                padding: 50px;
+            }
+
+            /* FOOTER */
+            .footer h2 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .post {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <div id="main">
+        <div class="header">
+            <p>BLOGS</p>
+
+            <div class="overlay">
+                <a href="/index.html">HOME</a>
+                <a href="/work/">WORK</a>
+                <a href="/testimonial/">TESTIMONIAL</a>
+                <a href="/contact/">CONTACT</a>
+            </div>
+        </div>
+
+        <div class="post">
+            <p>Benzema's move to Al-Hilal and Ronaldo's protest have exposed cracks in Saudi football's power balance.
+                What began as squad building has spiralled into a league-wide debate on fairness, control and ambition.
+            </p>
+
+            <p>
+                Cristiano Ronaldo and Karim Benzema once ruled Europe side by side, trading goals, trophies and
+                headlines in Real Madrid white.
+                In Saudi Arabia, they are still shaping the story, only now the drama is coming as much off the pitch as
+                on it. What should have been a routine phase of the season has turned into a reminder that superstar
+                footballers arrive with strong opinions, bigger expectations and zero patience for imbalance.
+
+            </p>
+
+            <p>
+                On Monday, Benzema officially joined Al-Hilal after terminating his contract with Al-Ittihad. The move
+                followed weeks of uncertainty, with local reports suggesting the French striker had no interest in
+                extending his deal after feeling underwhelmed by renewal talks. He had already missed Al-Ittihad’s
+                previous two league matches, and once that happened, the ending felt inevitable.
+
+            </p>
+
+            <p>
+                From a footballing lens, Benzema leaves Al-Ittihad having done his job and more. He led the Jeddah club
+                to a historic domestic double last season, lifting the Saudi Pro League and the King’s Cup for the first
+                time in their history.
+                Even this season, at 38, he remained decisive, scoring 16 goals in 21 matches across competitions.
+                Al-Hilal, already top of the table, have simply added another serial winner to a squad that already
+                looks frighteningly complete.
+                Benzema’s switch tilts the league
+            </p>
+
+            <p>
+                Al-Hilal sit on 47 points, just one ahead of Al-Nassr, but the gap feels far wider than that.
+                Al-Ittihad, meanwhile, have slipped to sixth, a sharp contrast to where they stood a year ago. Benzema’s
+                arrival does not just strengthen Al-Hilal, it reinforces a growing feeling that the league’s balance is
+                tilting heavily in one direction.
+            </p>
+
+            <p>
+                That feeling is exactly what has pushed Cristiano Ronaldo to the edge.
+                Reports from Portugal and Saudi Arabia suggest Ronaldo has refused to play for Al-Nassr despite being
+                fully fit. This is not a rebellion against his club. Al-Nassr’s CEO Jose Semedo is one of Ronaldo’s
+                closest allies, and there is no sense of internal chaos. The issue, instead, sits above club level.
+                Ronaldo’s protest sends a message
+
+            </p>
+
+            <p>
+                That feeling is exactly what has pushed Cristiano Ronaldo to the edge.
+                Reports from Portugal and Saudi Arabia suggest Ronaldo has refused to play for Al-Nassr despite being
+                fully fit. This is not a rebellion against his club. Al-Nassr’s CEO Jose Semedo is one of Ronaldo’s
+                closest allies, and there is no sense of internal chaos. The issue, instead, sits above club level.
+                Ronaldo’s protest sends a message
+            </p>
+
+            <p>
+                Ronaldo’s frustration is reportedly aimed at the Public Investment Fund, which controls Saudi Arabia’s
+                biggest clubs. Since 2023, Al-Hilal’s spending has dwarfed that of Al-Nassr.
+                Benzema’s move to Al Hilal has only sharpened the contrast, pointing fingers at the issue of some teams
+                being pushed ahead while others are left to make do.
+                For Ronaldo, this is about competitiveness. He wants a squad capable of winning silverware that has
+                eluded his Saudi chapter.
+            </p>
+
+            <p>
+                However, this move from Ronaldo also has a risk-factor for the Portuguese superstar.
+                Refusing to play while fully fit is a gamble, especially at 40, with match sharpness vital and a World
+                Cup looming on the horizon. Every missed game slows his march toward 1,000 career goals and invites
+                questions. But his actions seem to be sticking firmly to the – back the project properly, or accept the
+                fallout.
+            </p>
+
+            <p>
+                The situation leaves the league in an awkward spotlight. Benzema strengthens a dominant Al-Hilal.
+                Ronaldo’s protest exposes cracks in the entiree Saudi Pro League system, just when it was getting some
+                recognition in the world of football.
+                Even managers have hinted publicly at favouritism, adding weight to Ronaldo's argument.
+            </p>
+
+        </div>
+
+        <footer class="footer">
+            <h2>Umair Adil</h2>
+            <p>Digital Marketer • Content Creator • Brand Strategist</p>
+
+            <div class="socials">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+
+            <p class="copyright">© 2025 Umair Adil. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+    <script>
+        // Initialize Lenis
+        const lenis = new Lenis();
+
+        // Use requestAnimationFrame to continuously update the scroll
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+
+        const header = document.querySelector(".header");
+
+        document.addEventListener("click", (e) => {
+            if (header.contains(e.target)) {
+                header.classList.toggle("active");
+            } else {
+                header.classList.remove("active");
+            }
+        });
+
+    </script>
+</body>
+
+</html>

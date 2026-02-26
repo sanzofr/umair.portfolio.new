@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div class="header">
+            <p>CASE STUDIES</p>
+
+            <div class="overlay">
+                <a href="/index.html">HOME</a>
+                <a href="/blogs/">BLOGS</a>
+                <a href="/testimonial/">TESTIMONIAL</a>
+                <a href="/contact/">CONTACT</a>
+            </div>
+        </div>
+
+        <!-- <div class="featured-work">
+            <div class="featured-content">
+                <span class="featured-label">Featured Project</span>
+                <h2>GDG Hackathon Visual Coverage</h2>
+                <p>Full-scale event coverage capturing 500+ participants across 24 hours of innovation and
+                    collaboration.</p>
+                <a href="#" class="featured-btn">View Case Study</a>
+            </div>
+        </div> -->
+
+        <div class="work-list">
+
+            <!-- PROJECT 1 -->
+            <div class="work-card">
+                <div class="work-card-content">
+                    <span class="work-label">Real Project • 2025</span>
+                    <h2>GDG Hackathon Visual Coverage</h2>
+                    <p>
+                        Full-scale event coverage capturing 500+ participants across 24 hours of innovation,
+                        collaboration, and high-energy storytelling.
+                    </p>
+                    <a href="#" class="work-btn">View Case Study</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="work-card">
+                <div class="work-card-content">
+                    <span class="work-label">Case Study • 2025</span>
+                    <h2>Royal Gaming Station Brand Reel</h2>
+                    <p>
+                        Strategic brand reel focused on visual identity, gaming culture, and social-first
+                        storytelling designed to increase engagement.
+                    </p>
+                    <a href="#" class="work-btn">View Case Study</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="work-card">
+                <div class="work-card-content">
+                    <span class="work-label">Real Project • 2024</span>
+                    <h2>TJR Recruitment Campaign Strategy</h2>
+                    <p>
+                        Performance-driven hiring campaign combining conversion-focused content,
+                        audience targeting, and strategic messaging.
+                    </p>
+                    <a href="#" class="work-btn">View Case Study</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 4 -->
+            <div class="work-card">
+                <div class="work-card-content">
+                    <span class="work-label">Case Study • 2024</span>
+                    <h2>Treasure Hunt Campaign Visual Direction</h2>
+                    <p>
+                        Gamified marketing experience blending event branding, digital engagement,
+                        and interactive storytelling.
+                    </p>
+                    <a href="#" class="work-btn">View Case Study</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 5 -->
+            <div class="work-card">
+                <div class="work-card-content">
+                    <span class="work-label">Real Project • 2024</span>
+                    <h2>W3B Orientation Event Storytelling</h2>
+                    <p>
+                        Community-driven campus event coverage crafted to maximize reach,
+                        participation, and digital visibility.
+                    </p>
+                    <a href="#" class="work-btn">View Case Study</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="projects-intro">
+
+            <div class="projects-intro-left">
+                <p class="projects-lead">
+                    A selection of real-world projects and case studies focused on visual storytelling,
+                    brand identity, and digital engagement.
+                </p>
+
+                <p class="projects-desc">
+                    These works span event coverage, campaign direction, and branded content creation.
+                    Each project reflects a balance between creative vision and strategic execution —
+                    designed to capture attention, communicate clearly, and create lasting impact.
+                </p>
+
+                <div class="projects-meta">
+
+                    <div class="meta-block">
+                        <span class="label">PROJECTS</span>
+                        <p>12 Selected Works</p>
+                    </div>
+
+                    <div class="meta-block">
+                        <span class="label">FOCUS</span>
+                        <p>Content, Campaigns, Visual Direction</p>
+                    </div>
+
+                    <div class="meta-block">
+                        <span class="label">YEARS</span>
+                        <p>2024 — Present</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <h2>Umair Adil</h2>
+            <p>Digital Marketer • Content Creator • Brand Strategist</p>
+
+            <div class="socials">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+
+            <p class="copyright">© 2025 Umair Adil. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://unpkg.com/sanzo-js@2.0.0/sanzo.js"></script> -->
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis();
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        const header = document.querySelector(".header");
+
+        document.addEventListener("click", (e) => {
+            if (header.contains(e.target)) {
+                header.classList.toggle("active");
+            } else {
+                header.classList.remove("active");
+            }
+        });
+
+        // if (window.matchMedia("(min-width: 1024px)").matches) {
+        //     sanzo.previewCursor({
+        //         target: ".project-row",
+        //         images: [
+        //             "https://picsum.photos/600/400?random=2",
+        //             "https://picsum.photos/600/400?random=2",
+        //             "https://picsum.photos/600/400?random=2",
+        //             "https://picsum.photos/600/400?random=2",
+        //             "https://picsum.photos/600/400?random=2",
+        //         ]
+        //     });
+        // }
+    </script>
+</body>
+
+</html>

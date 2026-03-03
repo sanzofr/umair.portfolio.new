@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: jetBrains;
+    src: url(../fonts/JETBRAINSMONONL-LIGHT.TTF);
+}
+
+@font-face {
+    font-family: sf;
+    src: url(../fonts/SFUIDISPLAY-LIGHT.TTF);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #EFEAF5;
+    color: #121212;
+    font-family: sf;
+}
+
+/* header */
+.header {
+    font-family: jetBrains;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #777981;
+    border-radius: 5px;
+    width: 250px;
+    margin: 20px auto;
+    cursor: pointer;
+    color: #fff;
+}
+
+.header .overlay {
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -8px);
+    width: 250px;
+    top: 70px;
+    position: absolute;
+    border-radius: 5px;
+    left: 50%;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #777981
+}
+
+.header .overlay a {
+    color: #fff;
+}
+
+.header.active .overlay {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* Blogs */
+.blogs {
+    padding: 100px 200px;
+    width: 100%;
+    font-family: jetBrains;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Each blog row */
+.blogs .tittles {
+    position: relative;
+    width: 100%;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tittles .link {
+    position: absolute;
+    inset: 0;
+    text-decoration: none;
+}
+/* Left dot */
+.blogs .tittles .tag {
+    width: 10px;
+    height: 10px;
+    background-color: #9900FF;
+    border-radius: 50px;
+}
+
+/* Blog title */
+.blogs .tittles .tittle {
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1;
+}
+
+/* Date + arrow container */
+.blogs .tittles .date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px; /* reduced from 200px */
+    color: #575757;
+    overflow: visible;
+}
+
+/* Arrow icon */
+.blogs .tittles .date i {
+    transform: rotate(-140deg);
+    overflow: visible;
+}
+
+/* footer */
+.footer {
+    padding: 60px 200px;
+    text-align: center;
+    /* background-color: #0a0a0a; */
+}
+
+.footer h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.footer p {
+    opacity: 0.8;
+}
+
+.socials {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* -------- TABLET (≤ 1024px) -------- */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 80px 80px;
+    }
+
+
+}
+
+/* -------- MOBILE (≤ 768px) -------- */
+@media (max-width: 768px) {
+
+    /* GLOBAL PADDING */
+    .footer {
+        padding: 60px 24px;
+    }
+
+    /* HEADER */
+    .header {
+        padding: 10px 80px;
+    }
+
+    /* FOOTER */
+    .footer h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* Blogs Grid */
+.blogs {
+    padding: 100px 200px;
+    width: 100%;
+    font-family: jetBrains;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Blog Card */
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Thumbnail */
+.blog-card .thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #dcd6e6;
+}
+
+.blog-card .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.blog-card:hover .thumb img {
+    transform: scale(1.05);
+}
+
+/* Text area */
+.blog-card .info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Title */
+.blog-card .title {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #121212;
+}
+
+/* Subtitle */
+.blog-card .subtitle {
+    font-size: 13px;
+    color: #575757;
+}
+
+/* Link overlay */
+.blog-card .link {
+    position: absolute;
+    inset: 0;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .blogs {
+        padding: 80px 100px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .blogs {
+        padding: 60px 24px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+    .blogs {
+        padding: 50px 16px;
+    }
+
+}

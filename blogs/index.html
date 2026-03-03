@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <div id="main">
+        <div class="header">
+            <p>BLOGS</p>
+
+            <div class="overlay">
+                <a href="/">HOME</a>
+                <a href="/case-studies/">CASE STUDIES</a>
+                <a href="/testimonial/">TESTIMONIAL</a>
+                <a href="/contact/">CONTACT</a>
+            </div>
+        </div>
+
+        <div class="blogs">
+
+            <div class="blog-card">
+                <div class="thumb">
+                    <img src="https://picsum.photos/600/400?random=1">
+                </div>
+
+                <div class="info">
+                    <h3 class="title">
+                        Karim Benzema joins Al Hilal: How the transfer caused a Ronaldo riot
+                    </h3>
+
+                    <p class="subtitle">
+                        12 Jan • 5 min read
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="thumb">
+                    <img src="https://picsum.photos/600/400?random=2">
+                </div>
+
+                <div class="info">
+                    <h3 class="title">
+                        The future of AI in digital marketing and content creation
+                    </h3>
+
+                    <p class="subtitle">
+                        10 Jan • 7 min read
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="thumb">
+                    <img src="https://picsum.photos/600/400?random=2">
+                </div>
+
+                <div class="info">
+                    <h3 class="title">
+                        The future of AI in digital marketing and content creation
+                    </h3>
+
+                    <p class="subtitle">
+                        10 Jan • 7 min read
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="thumb">
+                    <img src="https://picsum.photos/600/400?random=2">
+                </div>
+
+                <div class="info">
+                    <h3 class="title">
+                        The future of AI in digital marketing and content creation
+                    </h3>
+
+                    <p class="subtitle">
+                        10 Jan • 7 min read
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="thumb">
+                    <img src="https://picsum.photos/600/400?random=5">
+                </div>
+
+                <div class="info">
+                    <h3 class="title">
+                        Building a strong audience on Instagram organically
+                    </h3>
+
+                    <p class="subtitle">
+                        4 Jan • 5 min read
+                    </p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="thumb">
+                    <img src="https://picsum.photos/600/400?random=6">
+                </div>
+
+                <div class="info">
+                    <h3 class="title">
+                        Creative workflows that improve productivity
+                    </h3>
+
+                    <p class="subtitle">
+                        2 Jan • 3 min read
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <h2>Umair Adil</h2>
+            <p>Digital Marketer • Content Creator • Brand Strategist</p>
+
+            <div class="socials">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+
+            <p class="copyright">© 2025 Umair Adil. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+    <script>
+        // Initialize Lenis
+        const lenis = new Lenis();
+
+        // Use requestAnimationFrame to continuously update the scroll
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+
+        const header = document.querySelector(".header");
+
+        document.addEventListener("click", (e) => {
+            if (header.contains(e.target)) {
+                header.classList.toggle("active");
+            } else {
+                header.classList.remove("active");
+            }
+        });
+
+    </script>
+</body>
+
+</html>

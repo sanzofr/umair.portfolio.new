@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+</head>
+
+<body>
+
+    <div class="glow"></div>
+    <div class="glow-2"></div>
+
+    <div id="main">
+
+        <!-- HEADER (preserved) -->
+        <div class="header">
+            <p>CONTACT</p>
+            <div class="overlay">
+                <a class="overlay-links" href="/">HOME</a>
+                <a class="overlay-links" href="/case-studies/">CASE STUDIES</a>
+                <a class="overlay-links" href="/testimonial/">TESTIMONIAL</a>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="page">
+
+            <!-- LEFT -->
+            <div class="contact-left">
+                <span class="contact-tag">Get in touch</span>
+                <h1 class="contact-title">Let's work<br><em>together.</em></h1>
+                <p class="contact-desc">Have a project in mind? Whether it's a brand campaign, event coverage, or a
+                    creative collaboration — I'd love to hear about it.</p>
+
+                <div class="contact-info">
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-text">
+                            <strong>Email</strong>
+                            umairadil@gmail.com
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="info-text">
+                            <strong>Based in</strong>
+                            India · Available Worldwide
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="info-text">
+                            <strong>Response time</strong>
+                            Usually within 24 hours
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT — FORM -->
+            <div class="contact-right">
+                <div class="form-card">
+
+                    <form id="contact-form">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input class="form-input" type="text" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input class="form-input" type="email" name="email" placeholder="your@email.com"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input class="form-input" type="text" name="subject" placeholder="What's this about?"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-input" name="message"
+                                placeholder="Tell me about your project, goals, timeline…" required></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            Send Message <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </form>
+
+                    <div class="form-divider"><span>or reach out directly</span></div>
+
+                    <div class="form-socials">
+                        <a class="social-btn" href="#">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                        <a class="social-btn" href="#">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a class="social-btn" href="#">
+                            <i class="fa-brands fa-twitter"></i> Twitter
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER (preserved) -->
+        <footer class="footer">
+            <h2>Umair Adil</h2>
+            <p>Digital Marketer • Content Creator • Brand Strategist</p>
+            <div class="socials">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <p class="copyright" style="font-size:12px; opacity:0.45; margin-top:10px;">© 2025 Umair Adil. All rights
+                reserved.</p>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+    <script>
+
+        // lennis
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // header func
+        const header = document.querySelector(".header");
+        document.addEventListener("click", (e) => {
+            if (header.contains(e.target)) {
+                header.classList.toggle("active");
+            } else {
+                header.classList.remove("active");
+            }
+        });
+
+        // form api
+        const form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            formData.append("access_key", "");
+
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert("Message sent successfully 🚀");
+                    form.reset();
+                } else {
+                    alert("Something went wrong.");
+                }
+
+            } catch (error) {
+                console.error(error);
+                alert("Error sending message.");
+            }
+        });
+    </script>
+</body>
+
+</html>

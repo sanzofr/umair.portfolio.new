@@ -57,6 +57,9 @@ body {
     margin: 20px auto;
     cursor: pointer;
     color: #fff;
+    position: relative;
+    z-index: 100;
+    user-select: none;
 }
 
 .header .overlay {
@@ -327,6 +330,7 @@ body {
     text-decoration: none;
     color: #121212;
 }
+
 .cta h1 {
     font-size: 48px;
     margin-bottom: 10px;
@@ -365,10 +369,12 @@ body {
     justify-content: center;
     gap: 20px;
 }
+
 .socials a {
     text-decoration: none;
     color: #121212;
 }
+
 .socials i {
     font-size: 22px;
     cursor: pointer;
@@ -516,14 +522,16 @@ body {
     }
 
     .picture .over1 {
-        left: -20px;          /* bring inside */
+        left: -20px;
+        /* bring inside */
         top: 80%;
         font-size: 12px;
         padding: 8px 14px;
     }
 
     .picture .over2 {
-        right: -10px;         /* bring inside */
+        right: -10px;
+        /* bring inside */
         top: 5%;
         max-width: 160px;
         padding: 8px 14px;

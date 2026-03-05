@@ -274,6 +274,10 @@ body {
     justify-content: center;
     gap: 20px;
 }
+.socials a {
+    text-decoration: none;
+    color: #121212;
+}
 
 .socials i {
     font-size: 22px;

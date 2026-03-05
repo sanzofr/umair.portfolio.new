@@ -108,7 +108,6 @@ body {
     height: auto;
     flex-shrink: 0;
     overflow: visible;
-    /* background-color: #777981; */
     border-radius: 5px;
     object-fit: cover;
 }

@@ -27,7 +27,7 @@ document.querySelectorAll(".blog-card").forEach(card => {
     card.addEventListener("click", () => {
         const fileId = card.getAttribute("data-pdf");
 
-        iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+        iframe.src = `/projects/${fileId}`;
         modal.classList.add("active");
     });
 });

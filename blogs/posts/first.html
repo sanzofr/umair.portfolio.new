@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="/favicon.jpg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -17,15 +18,7 @@
             overflow-x: hidden;
         }
 
-        @font-face {
-            font-family: jetBrains;
-            src: url(/fonts/JETBRAINSMONONL-LIGHT.TTF);
-        }
 
-        @font-face {
-            font-family: sf;
-            src: url(/fonts/SFUIDISPLAY-LIGHT.TTF);
-        }
 
         html,
         body {
@@ -33,14 +26,14 @@
             height: 100%;
             background-color: #EFEAF5;
             color: #121212;
-            font-family: sf;
+            font-family: "Source Sans 3", sans-serif;
         }
 
         /* ══════════════════════════════
            HEADER (unchanged)
         ══════════════════════════════ */
         .header {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             padding: 10px;
             display: flex;
             flex-direction: column;
@@ -109,7 +102,7 @@
 
         .post-tag {
             display: inline-block;
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 10px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
@@ -121,9 +114,9 @@
         }
 
         .post-hero h1 {
-            font-family: sf;
-            font-size: clamp(28px, 4.5vw, 52px);
-            font-weight: 900;
+            font-family: "Playfair Display", sans-serif;
+            font-size: clamp(40px, 4.5vw, 52px);
+            font-weight: 700;
             line-height: 1.15;
             letter-spacing: -0.02em;
             color: #121212;
@@ -132,7 +125,7 @@
         }
 
         .post-hero .subtitle {
-            font-family: sf;
+            font-family: "Source Sans 3", sans-serif;
             font-size: clamp(14px, 1.5vw, 17px);
             color: rgba(18, 18, 18, 0.55);
             line-height: 1.75;
@@ -165,7 +158,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 13px;
             color: #fff;
             flex-shrink: 0;
@@ -179,13 +172,13 @@
         }
 
         .meta-name {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 12px;
             color: #121212;
         }
 
         .meta-role {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 10px;
             color: rgba(18, 18, 18, 0.45);
         }
@@ -197,7 +190,7 @@
         }
 
         .meta-info {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 11px;
             color: rgba(18, 18, 18, 0.45);
             display: flex;
@@ -247,7 +240,7 @@
         }
 
         .cover-placeholder span {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 10px;
             letter-spacing: 0.08em;
             text-transform: uppercase;
@@ -330,7 +323,7 @@
         }
 
         .section-label {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 10px;
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -349,9 +342,9 @@
         }
 
         .article-body h2 {
-            font-family: sf;
-            font-size: clamp(20px, 2.5vw, 28px);
-            font-weight: 800;
+            font-family: "Playfair Display", sans-serif;
+            font-size: clamp(26px, 2.5vw, 28px);
+            font-weight: 700;
             line-height: 1.25;
             letter-spacing: -0.018em;
             color: #121212;
@@ -359,9 +352,9 @@
         }
 
         .article-body p {
-            font-family: sf;
-            font-weight: 500;
-            font-size: clamp(18px, 1.8vw, 16px);
+            font-family: "Source Sans 3", sans-serif;
+            font-weight:400;
+            font-size: clamp(17px, 1.8vw, 16px);
             line-height: 1.9;
             color: #000;
             margin-bottom: 18px;
@@ -408,7 +401,7 @@
         }
 
         .article-image-placeholder span {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 10px;
             letter-spacing: 0.08em;
             text-transform: uppercase;
@@ -416,7 +409,7 @@
 
         .article-caption {
             padding: 9px 14px 11px;
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 11px;
             color: rgba(18, 18, 18, 0.38);
             text-align: center;
@@ -433,7 +426,7 @@
         }
 
         .callout-text {
-            font-family: sf;
+            font-family: "Source Sans 3", sans-serif;
             font-size: clamp(15px, 1.6vw, 19px);
             line-height: 1.65;
             color: #121212;
@@ -442,7 +435,7 @@
         }
 
         .callout-attr {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 10px !important;
             color: #777981 !important;
             font-weight: 600;
@@ -462,7 +455,7 @@
             display: flex;
             align-items: flex-start;
             gap: 12px;
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: clamp(12px, 1.2vw, 14px);
             line-height: 1.85;
             color: rgba(18, 18, 18, 0.65);
@@ -502,7 +495,7 @@
         }
 
         .tags-label {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 10px;
             color: rgba(18, 18, 18, 0.4);
             letter-spacing: 0.07em;
@@ -511,7 +504,7 @@
         }
 
         .tag {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 10px;
             font-weight: 600;
             padding: 5px 12px;
@@ -549,7 +542,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 16px;
             color: #fff;
             flex-shrink: 0;
@@ -563,7 +556,7 @@
         }
 
         .author-card-label {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 10px;
             color: rgba(18, 18, 18, 0.4);
             margin-bottom: 3px;
@@ -572,14 +565,14 @@
         }
 
         .author-card-name {
-            font-family: sf;
+            font-family: "Source Sans 3", sans-serif;
             font-size: 15px;
             color: #121212;
             margin-bottom: 6px;
         }
 
         .author-card-bio {
-            font-family: jetBrains;
+            font-family: "Playfair Display", serif;
             font-size: 12px;
             color: rgba(18, 18, 18, 0.55);
             line-height: 1.75;

@@ -1,18 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-}
-
-@font-face {
-    font-family: jetBrains;
-    src: url(../fonts/JETBRAINSMONONL-LIGHT.TTF);
-}
-
-@font-face {
-    font-family: sf;
-    src: url(../fonts/SFUIDISPLAY-LIGHT.TTF);
 }
 
 html,
@@ -21,12 +12,12 @@ body {
     height: 100%;
     background-color: #EFEAF5;
     color: #121212;
-    font-family: sf;
+    font-family: 'Source Sans 3', sans-serif;
 }
 
 /* header */
 .header {
-    font-family: jetBrains;
+    font-family: 'Playfair Display', serif;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -74,7 +65,7 @@ body {
 .blogs {
     padding: 100px 200px;
     width: 100%;
-    font-family: jetBrains;
+    font-family: 'Playfair Display', serif;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -199,7 +190,7 @@ body {
 .blogs {
     padding: 100px 200px;
     width: 100%;
-    font-family: jetBrains;
+    font-family: 'Playfair Display', serif;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
